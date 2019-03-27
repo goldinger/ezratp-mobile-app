@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator, createAppContainer, HomeIconWithBadge} from "react-navigation";
-import HomeScreen from "./screens/HomeScreen";
-import AccountScreen from "./screens/AccountScreen";
-import Find from "./screens/Find";
+import HomeScreen from "./screens/Home/HomeScreen";
+import AccountScreen from "./screens/Account/AccountScreen";
+import FindScreen from "./screens/Search/FindScreen";
 
 
 const AppNavigator = createBottomTabNavigator(
@@ -12,7 +12,7 @@ const AppNavigator = createBottomTabNavigator(
             screen: HomeScreen
         },
         Find: {
-            screen: Find
+            screen: FindScreen
         },
         Account: {
             screen: AccountScreen
@@ -46,7 +46,7 @@ const AppNavigator = createBottomTabNavigator(
 
 const AppContainer = createAppContainer(AppNavigator);
 
-export default class App extends Component {
+export default class App extends React.Component {
     render() {
         return <AppContainer />;
     }
