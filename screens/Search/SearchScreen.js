@@ -35,7 +35,6 @@ class FindScreen extends React.Component {
     };
 
     _renderItem = ({item}) => {
-        // const title = item.name + ' - ' + item.line.reseau.name + ' ' + item.line.code;
         return <StationItem
             id={item}
             onPressItem={this._onPressItem}
@@ -43,6 +42,8 @@ class FindScreen extends React.Component {
             stationName={item.name}
             lineName={item.line.reseau.name}
             lineCode={item.line.code}
+            lineImage={item.line.image}
+            reseauImage={item.line.reseau.image}
         />;
     };
 

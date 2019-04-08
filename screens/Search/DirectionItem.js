@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {Text, TouchableOpacity, View} from "react-native";
+import {Text, View} from "react-native";
 import React from 'react';
 
 class DirectionItem extends React.PureComponent {

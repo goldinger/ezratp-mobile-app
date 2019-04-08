@@ -1,6 +1,7 @@
 import React from "react";
 import {FlatList, Text, View} from "react-native";
 import DirectionItem from "./DirectionItem";
+import StationItem from "./StationItem";
 
 class StationDetailsScreen extends React.Component {
     componentWillMount(): void {
@@ -28,12 +29,15 @@ class StationDetailsScreen extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: "space-between" }}>
-                <View style={{flex: 1, alignItems: 'center'}}>
-                    <Text>{this.state.station.name}</Text>
-                    <Text>{this.state.station.line.reseau.name}</Text>
-                    <Text>{this.state.station.line.code}</Text>
-                </View>
+            <View style={{flex: 1}}>
+                <StationItem
+                    stationName={this.state.station.name}
+                    onPressItem={() => {}}
+                    lineName={this.state.station.line.reseau.name}
+                    lineCode={this.state.station.line.code}
+                    lineImage={this.state.station.line.image}
+                    reseauImage={this.state.station.line.reseau.image}
+                />
                 <FlatList
                     data={this.state.directions}
                     extraData={this.state}
